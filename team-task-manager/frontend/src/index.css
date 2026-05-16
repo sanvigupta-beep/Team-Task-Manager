@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply font-sans antialiased;
+  }
+  body {
+    @apply bg-ink-50 text-ink-900 dark:bg-ink-950 dark:text-ink-100;
+  }
+  ::selection {
+    @apply bg-brand-500/30 text-brand-900 dark:text-brand-100;
+  }
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    @apply h-2 w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-ink-200 dark:bg-ink-800;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ink-300 dark:bg-ink-700;
+  }
+}
+
+@layer components {
+  /* ----- inputs ----- */
+  .input {
+    @apply w-full rounded-xl border border-ink-200 bg-white px-3.5 py-2.5 text-sm text-ink-900 placeholder-ink-400 transition focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-500/15
+           dark:border-ink-700 dark:bg-ink-900 dark:text-ink-100 dark:placeholder-ink-500 dark:focus:border-brand-400 dark:focus:ring-brand-500/20;
+  }
+
+  /* ----- buttons ----- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 active:scale-[0.98];
+  }
+  .btn-primary {
+    @apply btn bg-gradient-brand text-white shadow-glow hover:shadow-glow-pink focus:ring-brand-500/30;
+  }
+  .btn-secondary {
+    @apply btn border border-ink-200 bg-white text-ink-700 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700 focus:ring-brand-500/20
+           dark:border-ink-700 dark:bg-ink-900 dark:text-ink-200 dark:hover:border-brand-500 dark:hover:bg-ink-800 dark:hover:text-brand-300;
+  }
+  .btn-danger {
+    @apply btn bg-gradient-danger text-white shadow-[0_10px_30px_-10px_rgba(239,68,68,0.45)] hover:opacity-95 focus:ring-red-500/30;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-ink-700 hover:bg-ink-100 dark:text-ink-200 dark:hover:bg-ink-800;
+  }
+
+  /* ----- cards ----- */
+  .card {
+    @apply rounded-2xl border border-ink-200 bg-white shadow-soft transition
+           dark:border-ink-800 dark:bg-ink-900;
+  }
+  .card-hover {
+    @apply hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-glow dark:hover:border-brand-500/50;
+  }
+  .card-gradient {
+    @apply relative overflow-hidden rounded-2xl border border-white/40 bg-white/70 shadow-soft backdrop-blur-xl
+           dark:border-white/10 dark:bg-ink-900/60;
+  }
+
+  /* gradient ring/glow chip used on stat cards */
+  .stat-icon {
+    @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-white shadow-lg;
+  }
+
+  /* labels */
+  .form-label {
+    @apply block text-sm font-medium text-ink-700 dark:text-ink-200;
+  }
+
+  /* gradient text */
+  .text-gradient {
+    @apply bg-gradient-brand bg-clip-text text-transparent;
+  }
+
+  /* dotted badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+  .badge::before {
+    content: "";
+    @apply h-1.5 w-1.5 rounded-full bg-current opacity-80;
+  }
+  .badge-plain {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply h-1.5 w-1.5;
+  }
+}
