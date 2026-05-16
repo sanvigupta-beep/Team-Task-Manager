@@ -1,17 +1,17 @@
 # Team Task Manager
 
-A full-stack team collaboration platform that lets teams create projects, manage tasks, assign members, and track progress — all with role-based access control.
+A full-stack team collaboration platform that lets teams create projects, manage tasks, assign members, and track progress - all with role-based access control.
 
 ## Features
 
-- **Authentication** — Email/password signup & login, JWT-based persistent sessions, bcrypt-hashed passwords
-- **Role-Based Access Control** — `admin` and `member` roles with strictly enforced permissions
-- **Projects** — Create, edit, delete, search, and invite team members
-- **Tasks** — Create, assign, prioritize, set due dates, filter, and search
-- **Status Workflow** — `To Do -> In Progress -> Completed`
-- **Dashboard** — Stats, charts (status/priority breakdowns), recent activity, overdue tracking
-- **Modern UI** — Responsive, accessible, Tailwind-styled, with toasts and loading states
-- **Production-ready** — Error handling, pagination, validation, async handlers, env-based config
+- **Authentication** - Email/password signup & login, JWT-based persistent sessions, bcrypt-hashed passwords
+- **Role-Based Access Control** - `admin` and `member` roles with strictly enforced permissions
+- **Projects** - Create, edit, delete, search, and invite team members
+- **Tasks** - Create, assign, prioritize, set due dates, filter, and search
+- **Status Workflow** - `To Do -> In Progress -> Completed`
+- **Dashboard** - Stats, charts (status/priority breakdowns), recent activity, overdue tracking
+- **Modern UI** - Responsive, accessible, Tailwind-styled, with toasts and loading states
+- **Production-ready** - Error handling, pagination, validation, async handlers, env-based config
 
 ## Tech Stack
 
@@ -177,7 +177,7 @@ All authenticated requests use `Authorization: Bearer <token>`.
 > - `docs/screenshots/tasks.png`
 > - `docs/screenshots/login.png`
 
-## Run Locally — Quickstart
+## Run Locally - Quickstart
 
 ```bash
 # Terminal 1
